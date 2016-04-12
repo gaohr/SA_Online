@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="cn"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="高会然" content=""/>
+	<title>SEIM Introduction</title>
+	
+	<link href="../../css/bootstrap/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../../css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../../css/style/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../../css/style/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../../css/style/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="../../css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+	<link rel="stylesheet" href="../../css/ol/ol.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/layout.css" type="text/css"/>
+	<link href="../../css/switchdemo.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/component.css" />
+	
+	<link rel="shortcut icon" href="../../img/earth.png" />
+
+<!-- 顶部 -->
+</head>
+<body class="page-header-fixed">
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="../MyIndex.html" style="color:#1E90FF; font-size:32px;text-decoration:none">
+				<img src="../../img/earth.png" alt="logo"/>SEIM
+				</a>
+				<ul class="nav pull-right">
+					<li class="dropdown" id="header_notification_bar">
+						<li class="dropdown user">
+						<a href="#" data-toggle="dropdown">
+						<img alt="name" src="../../img/icon/zhx.png"/>
+						<span class="username">User</span>
+						<i class="icon-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+							<li><a href="#"><i class="icon-calendar"></i> My Data</a></li>
+							<li><a href="#"><i class="icon-envelope"></i> My Work</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> My Result</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-lock"></i> Lock Screen</a></li>
+							<li><a href="#"><i class="icon-key"></i> Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+				
+<div class="page-container">
+	<!-- 左边栏 -->
+		<div class="page-sidebar nav-collapse collapse">
+			<ul class="page-sidebar-menu">
+				<li>
+					<div class="sidebar-toggler hidden-phone icon-list"></div>
+				</li>
+				<li>
+					<form class="sidebar-search">
+						<div class="input-box"><a href="javascript:;" class="remove"></a>
+							<input type="text" placeholder="查询..."/>
+							<input type="button" class="submit" style="height:15px;width:15px; background-image: url(../../img/icon/glass.png)"/>
+						</div>
+					</form>
+				</li>
+				<li class="start">
+					<a href="../index.html">
+					<i class="icon-home"></i> 
+					<span class="title">主页</span>
+					<span class="selected"></span>
+					</a>
+				</li>
+				<li class="">
+					<a href="../DataDisplay.html">
+					    <i class="icon-picture"></i> 
+					    <span class="title">数据显示</span>
+					</a>
+				</li>
+				<li class="active">
+					<a id="modal-01" href="#modal-container-01" role="button" data-toggle="modal">
+					<i class="icon-cogs"></i> 
+					<span class="title">治理措施</span>
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub-menu">
+					    <li><a href="#"><i class="icon-cogs"></i>工程措施<span class="arrow"></span></a>
+					        <ul class="sub-menu">
+								<li><a href="../EngineBMP.html"><i class="icon-cog"></i>茶果园坡改梯</a></li>
+							</ul>
+					    </li>
+					    <li><a href="#"><i class="icon-cogs"></i>非工程措施<span class="arrow"></span></a>
+					        <ul class="sub-menu">
+								<li><a href="../EngineNonBMP.html"><i class="icon-cog"></i>低效林改造</a></li>
+								<li><a href="../EngineNonBMP.html"><i class="icon-cog"></i>等高草灌带</a></li>
+								<li><a href="../EngineNonBMP.html"><i class="icon-cog"></i>草灌乔混交</a></li>
+								<li><a href="../EngineNonBMP.html"><i class="icon-cog"></i>小穴播草</a></li>
+								<li><a href="../EngineNonBMP.html"><i class="icon-cog"></i>封禁</a></li>
+							</ul>
+					    </li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="javascript:;">
+					<i class="icon-wrench"></i> 
+					<span class="title">情景分析</span>
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub-menu">
+						<li><a href="#" class="active"><i class="icon- icon-user"></i>人工配置<span class="arrow"></span></a>
+							<ul class="sub-menu">
+								<li><a href="../Single-Config.html"><i class="icon-edit"></i>空间逐地块设计情景</a></li>
+								<li><a href="../Rules-Config.html"><i class=" icon-th-large"></i>按属性规则设计情景</a></li>
+							</ul>
+						</li>
+						<li><a href="../Guanjianyq.html"><i class="icon-screenshot"></i>按关键源区配置治理目标</a></li>
+						<li><a href="../Intelligent-Optimization.html"><i class="icon-sitemap"></i>智能优化</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-legal"></i> 
+					<span class="title">决策支持</span>
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub-menu">
+						<li><a href="../ScenarioSet.html"><i class=" icon-beaker"></i>多情景集加载、批量分析</a></li>
+						<li><a href="#" class="active"><i class=" icon-bar-chart"></i>情景分析结果对比<span class="arrow"></span></a>
+							<ul class="sub-menu">
+								<li><a href="../Evaluation.html"><i class="icon-comment-alt"></i>单一评价</a></li>
+								<li><a href="#"><i class="icon-comments-alt"></i>综合评价</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="javascript:;">
+					<i class="icon-comment"></i> 
+					<span class="title">关于</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+						    <a href="#"><i class="icon-group"></i>Group</a>
+						</li>
+						<li>
+						    <a href="#"><i class="icon-briefcase"></i>More</a>
+						</li>
+					</ul>
+				</li>
+            </ul>
+        </div>
+     </div>
+<!-- 页面 -->
+    <div class="page-content">
+		<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+					    <div class="row-fluid">
+					        <div class="span8">
+						        <h3 class="page-title">SEIM<small>&nbsp;Introduction of SEIM</small></h3>
+						        
+						    </div>
+						    <div class="span4">
+					    <a title="Back to Introductions of BMPs" class="btn gray pull-right" style="margin-top:25px"href="../IntroBMP.html">
+					        <i class="icon-undo" style="font-size:18px"></i>
+					    </a>
+			</div>
+			</div>
+					</div>
+				</div>
+					<div class="blog-page">
+							<div class="article-block">
+							    <div class="breadcrumb"><b>SEIM</b></div>
+							    <div class="row-fluid">
+							        <div class="span7">
+							            <h6 style="line-height:22px;margin:10px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEIM模型是一个基于栅格的顺序依赖的水文模型，是在借鉴了<a>WetSpa</a>、<a>LISEM</a>、<a>CASC2D</a>、<a>DHSVM</a>等多个模型基础上开发的空间全分布式水文模型。
+							                                          该模型主要特点是采用模块化的设计，可以根据研究目的选择每个子过程的算法及其对应的模块，同时采用了<a>子流域-基本单元双层并行计算方法</a>对模型进行了并行化，提高了流域模拟的效率。<br>
+							            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEIM模型以栅格为空间划分单元，沿树形汇流网络从上游到下游逐栅格进行汇流演算，能较精细地模拟水流在空间上的迁移过程和栅格单元之间的相互作用（右图）。
+							                                        模型假设在栅格内部植被、土壤等地理特征是均一的，并将每个栅格单元在垂向上划分为植被层、根系层、地下层三层。植被层指植被的地上部分，与截留、蒸散发等子过程相关；根系层是土壤表层植物活根系所在区域，该层有一定的蓄水能力，并且<a href="#aa"><code>水文过程</code></a>（入渗、蒸发、渗漏、壤中流等）活跃；地下层是根系层以下的土层和岩层，
+							                                       该层水流速度缓慢，本模型将一个子流域的地下层作为整体进行模拟。</h6>
+						            </div>
+						            <div class="span5">
+						                <img alt="" src="http://zhulj-blog.oss-cn-beijing.aliyuncs.com/SEIMS_Online/SA_Online/SEIMStructure.jpg">
+						                <p style="text-align:center">SEIM模型的空间结构示意图</p>
+						            </div>
+						        </div>
+						        <div class="breadcrumb" id="aa" style="margin-top:45px"><b>Hydrological Processes</b></div>	
+				                <div class="row-fluid">         
+				                    <div class="span6">
+				                        <h6 style="line-height:22px;margin:10px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEIM模型在水文模拟流程方面主要参考了WetSpa模型，所模拟的子过程包括<a href="#accordion-element-1" data-toggle="collapse" >截留</a>、<a href="#accordion-element-2" data-toggle="collapse" >入渗</a>、填洼、地表汇流、壤中流、渗漏、地下水、蒸散发、河道汇流等。下图给出了对这些子过程进行模拟的流程，各个水文子过程的计算方法如下。</h6>
+					                    <img src="http://zhulj-blog.oss-cn-beijing.aliyuncs.com/SEIMS_Online/SA_Online/SEIMSub.jpg" style="width:420px;margin-left:6%">
+					                    <p style="text-align:center">SEIM模型中的子过程模拟流程</p>
+					                </div>
+					                <div class="span6"> 
+					                    <div class="accordion" id="accordion">
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-1">截留</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-1">
+                                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;截留量是指被树冠等植被阻截进而蒸发的降水部分。SEIM模型采用WetSpa模型中的截留计算方法，截留量根据水量平衡原理计算：</p>
+                                                        <img src="http://i2.tietuku.com/47d31cea8157c7f4.jpg">
+                                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，i为栅格的索引，表示第i个栅格；SIi（t）和SIi（t-1）分别为t和t-1时段的截留储存量（mm）；Ii（t）为t时段产生的截留量（mm）；EIi（t）为截留储存水分的蒸发量（mm）。Ii（t）和EIi（t）的计算方法如下：</p>
+                                                        <img src="http://i2.tietuku.com/8f4437d94fc60739.jpg">
+                                                        <img src="http://i2.tietuku.com/af58d792f717de18.jpg">
+                                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中；Pi（t）为t时段的降水量（mm）；EPi（t）为t时段的潜在蒸发量（mm）；Ii,0为截留储存容量（mm），受土地利用方式影响并随季节变化：</p>
+                                                        <img src="http://i2.tietuku.com/5892d6e70581cee3.jpg">
+                                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中Ii,min和Ii,max分别为一年内的最小和最大截留储存容量（mm），受植被覆盖影响；d为一年中的日序数；b为常数。</p>                                                 
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-2">入渗</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-2">
+                                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEIM模型中包含的入渗子过程模拟采用了Green-Ampt方法。Green-Ampt模型是根据Darcy定律建立起来的一种近似模型[91]。模型假定水流以活塞流形式进入土壤，在湿润和未湿润区之间形成一个剧变的湿润锋面，其入渗率公式为：</p>
+                                                    <img src="http://i1.tietuku.com/23bfa22cd4c01a11.jpg">
+                                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;式中， 是在t时刻的下渗速率（mm/hr）， 是土壤相对湿度（mm/mm）， 是饱和水力传导系数(mm/hr)， 是湿润峰基质势（mm）， 是在t时刻的下渗累积量（mm）。</p>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-3">填洼</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-3">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-4">地表汇流</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-45">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-5">壤中流</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-5">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-6">渗漏</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-6">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-7">地下水</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-7">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-8">蒸散发</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-8">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#accordion-element-9">河道汇流</a></div>
+                                                <div class="accordion-body collapse" id="accordion-element-9">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+					                </div>
+					            </div>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+         
+            
+<!-- footer -->
+	<div class="footer">
+		<div class="footer-inner">
+			2015 &copy; IGSNRR <a>GHR</a>
+		</div>
+		<div class="footer-tools">
+			<span class="go-top">
+			<i class="icon-angle-up"></i>
+			</span>
+		</div>
+	</div>
+	
+	<script src="../../tools/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="../../tools/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-ui.custom.min.js" type="text/javascript"></script> 
+	<script src="../../tools/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	
+	<script src="../../tools/jquery/jquery.slimscroll.js" type="text/javascript"></script>
+	<script src="../../tools/jquery/jquery.blockui.js" type="text/javascript"></script>
+	<script src="../../tools/jquery/jquery.cookie.min.js" type="text/javascript"></script>  
+	<script src="../../tools/jquery/jquery.uniform.min.js" type="text/javascript"></script>
+	<script src="../../tools/jquery/jquery.sparkline.min.js" type="text/javascript"></script> 
+	<script src="../../tools/jquery/jquery.akordeon.js" type="text/javascript"></script> 
+	<script src="../../tools/app.js" type="text/javascript"></script>
+	<script src="../../tools/index.js" type="text/javascript"></script>
+    
+	 <!-- 
+	<script src="http://localhost:8080/geoserver/openlayers/OpenLayers.js" type="text/javascript"></script> 
+     -->
+	
+	<script>
+		jQuery(document).ready(function() {    
+		   App.init(); 
+		});
+	</script>
+</body>
+</html>
+

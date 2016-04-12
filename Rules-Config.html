@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="cn"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="高会然" content=""/>
+	<title>Rules Configure</title>
+	<link href="../css/bootstrap/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+	<link rel="stylesheet" href="../css/ol/ol.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/layout.css" type="text/css"/>
+	<link href="../css/InputFile.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/switchdemo.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/alertcss.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../css/geoservermap.css"/>
+	
+	<link rel="stylesheet" href="../css/ol/ol3-layerswitcher.css">
+	<link rel="stylesheet" href="../css/mappopup.css">
+	<link rel="stylesheet" href="../css/component.css">
+	
+	<link rel="shortcut icon" href="../img/earth.png" />
+
+<!-- 顶部 -->
+</head>
+<body class="page-header-fixed">
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html" style="color:#1E90FF; font-size:32px;text-decoration:none">
+				<img src="../img/earth.png" alt="logo"/>Scenario Analysis Online
+				</a>
+				<!-- 响应式菜单 -->
+				<a href="javascript:;" class="btn-navbar collapsed icon-list" data-toggle="collapse" data-target=".nav-collapse"></a>
+				<ul class="nav pull-right">
+					<li class="dropdown" id="header_notification_bar">
+						<li class="dropdown user">
+						<a href="#" data-toggle="dropdown" id="userin">
+							<img alt="name" id="userhead-in" src="" width="32"/>
+							<span class="username" id="username-in">User</span>
+							<i class="icon-angle-down"></i>
+						</a>
+						<a href="#" id="userout">
+							<img alt="name" id="userhead-out" src="" width="32"/>
+							<span class="username" id="username-out"></span>
+						</a>
+						<ul class="dropdown-menu" id="usermenu">
+							<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+							<li><a href="#"><i class="icon-calendar"></i> My Data</a></li>
+							<li><a href="#"><i class="icon-envelope"></i> My Work</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> My Result</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-lock"></i> Lock Screen</a></li>
+							<li><a href="login/Login.html"><i class="icon-key" id="logout"></i> Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+				
+<div class="page-container">
+	<!-- 左边栏 -->
+	<div class="page-sidebar nav-collapse collapse" id="menu-left"><input id="sign" value="config"></div>
+</div>
+<!-- 页面 -->
+    <div class="page-content" style="background:#f5f5f5">
+		<div class="container-fluid" style="margin-left:-20px">
+						<h4 style="margin-left:10px;height:12px;line-height:12px;font-family:方正姚体">按属性规则设计情景</h4>
+						<div class="row-fluid">
+							<div class="span9">
+				<div class="portlet box light-grey" style="width:102%">
+								<div class="span12">
+                                    <div id="map">
+        								<div id="popup" class="ol-popup-rule">
+          									<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+          									<div id="popup-content"></div>
+        								</div>  
+   									 </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="row-fluid">
+                                    </div>
+                                </div> 
+				        </div>
+				        <div class="portlet box grey" style="margin-top:-25px;width:102%">
+				            <div class="portlet-body" style="height:90px">
+				                <div class="span7 gridn">
+				                    <figure class="effect-sadie" onclick="displayBMPinfo('aainfo')">
+		                                <img src="../img/image/BMPdixiaolin.png"/>
+		                                <figcaption><h6>低效林改造</h6></figcaption>			
+	                                </figure>
+	                                <figure class="effect-sadie" onclick="displayBMPinfo('bbinfo')">
+		                                <img src="../img/image/BMPdenggaocgd.png"  class="img-rounded"/>
+		                                <figcaption><h6>等高草灌带</h6></figcaption>			
+	                                </figure>
+                                    <figure class="effect-sadie" onclick="displayBMPinfo('ccinfo')">
+		                                <img src="../img/image/BMPcaoguanqiao.png"/>
+		                                <figcaption><h6>草灌乔混交</h6></figcaption>			
+	                                </figure>
+	                                <figure class="effect-sadie" onclick="displayBMPinfo('ddinfo')">
+		                                <img src="../img/image/BMPxiaoxuebocao.png"/>
+		                               <figcaption><h6>小穴播草</h6></figcaption>			
+	                                </figure>
+	                                <figure class="effect-sadie" onclick="displayBMPinfo('eeinfo')">
+		                                <img src="../img/image/BMPchgypgt.png"/>
+		                                <figcaption><h6>茶果园改梯</h6></figcaption>			
+	                                </figure>
+	                                <figure class="effect-sadie" onclick="displayBMPinfo('ffinfo')">
+		                                <img src="../img/image/BMPfengjin.png"/>
+		                                <figcaption><h6>封禁</h6></figcaption>			
+	                                </figure>
+							    </div>
+							    <div class="span5" style="padding:15px 10px;margin:5px;border:1px solid #aaa;border-radius:10px">
+                                    <button class="btn btn-success" title="新增" id="reset_rules" onclick="location.reload();"><i class="icon-plus"></i>新增</button>
+                                    <button class="btn btn-success" title="保存" id="save_rules" onclick=""><i class="icon-save"></i>保存</button>
+                                    <span class="btn btn-success fileinput-button" title="载入"><i class="icon-upload"></i><input type="file"></span>
+                                    <button class="btn btn-warning" title="重设" id="" onclick="location.reload();"><i class="icon-refresh"></i></button>
+                                    <button class="btn btn-info pull-right" title="RUN" id="run_rules">&nbsp;&nbsp;<i class="icon-circle-arrow-right"></i>&nbsp;&nbsp;</button>                       
+							    </div>
+				            </div>
+				        </div>
+				         <div id="runmask" style="display:none;position:absolute;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.6);z-index:999">
+     							<div style="position:absolute;top:24%;left:32%;height:120px;width:450px;padding:10px;background:rgba(255,255,255,0.9);text-align:center;border-radius:5px">
+     								<div class="container-fluid">
+     									<div class="row-fluid">
+     										<div class="span3">
+     											<img src="http://zhulj-blog.oss-cn-beijing.aliyuncs.com/SEIMS_Online/SA_Online/icon/loading_w.gif" width="60px" float="right">
+     										</div>
+     										<div class="span9">
+     											<p style="color:#00bfff;font-size:16px;font-family:华文琥珀;float:left">正在运行模型，请稍等……</p>
+     										</div>
+     										<img src="../img/icon/running.gif">
+     									</div>
+     								</div>
+     								<br>
+     							<button class="btn" id="hidemask">后台运行</button>
+     						</div>
+     					</div>
+				        <div class="portlet box grey" style="margin-top:-25px;width:102%">
+				            <div id="BMPsparam" class="portlet-body" style="height:180px">
+				            	<div class="tabbable" id="preinfo">
+				            		<ul class="nav nav-tabs">
+					            		<li class="active"><a data-toggle="tab" href="#panel-pa1">措施介绍</a></li>
+					           			<li><a data-toggle="tab" href="#panel-pa2">BMP参数</a></li>
+					           			<li><a data-toggle="tab" href="#panel-pa3">实施结果</a></li>
+				           			</ul>
+				           			<div class="tab-pane active" id="panel-pa1"><p style="color:gray;padding-left:30px">点击以上BMP图标显示详细信息</p></div>
+				        		</div>
+				            </div>
+				        </div>
+					</div>
+							<div class="span3">
+				     <div class="infodiv" style="height:585px">
+				     	<div class="infodiv-title">
+								<div class="pull-left"><i class="icon-search"></i>属性查询</div>
+								<div class="btn-group pull-right">
+									<a class="btn btn-mini btn-warning" href="#" data-toggle="dropdown"><span class="caret"></span></a>
+									<div class="dropdown-menu hold-on-click dropdown-checkboxes" style="min-width:50px !important">
+										<label><input type="radio" name="sradio" checked value="or"> Or</label>
+										<label><input type="radio" name="sradio" value="and"> And</label>
+									</div>
+								</div>
+							</div>
+			         <div class="infodivcontent" style="height:290px;">
+                         <div class="row-fluid form-inline" id="fielddivs" style="height:235px;border-bottom:1px solid #999;overflow:auto">
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="fid" checked="checked"/>
+                             	 <label for="fid" data-trigger="hover" class="popovers" data-placement="top" data-content="Object ID">&nbsp;FID</label>
+                                 <select style="width:50px" id="selectid"><option value="0">=</option></select>
+                                 <input class="span4" type="text" id="sfid" placeholder="[FID]" style="width:80px"/>
+                             </div>
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="area" checked="checked"/>
+                             	 <label for="area" data-trigger="hover" class="popovers" data-placement="top" data-content="Area">&nbsp;Area</label>
+                                 <select style="width:50px" id="selectarea"><option value="0">=</option><option value="1">&gt;</option><option value="2">&lt;</option></select>
+                                 <input class="span4" type="text" id="sfarea" placeholder="[Area]㎡" style="width:80px"/>
+                             </div> 
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="landuse" checked="checked"/>
+                             	 <label for="landuse" data-trigger="hover" class="popovers" data-placement="top" data-content="LandUse">&nbsp;LUse</label>
+                                 <select style="width:50px" id="selectlanduse"><option value="0">=</option></select>
+                                 <input class="span4" type="text" id="sflanduse" placeholder="[LandUse]" style="width:80px"/>
+                             </div>
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="ele" checked="checked"/>
+                             	 <label for="ele" data-trigger="hover" class="popovers" data-placement="top" data-content="Elevation">&nbsp;Ele</label>
+                                 <select style="width:50px" id="selectele"><option value="0">=</option><option value="1">&gt;</option><option value="2">&lt;</option></select>
+                                 <input class="span4" type="text" id="sfele" placeholder="[Elevation]m" style="width:80px"/>
+                             </div>  
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="slp" checked="checked"/>
+                             	 <label for="slp" data-trigger="hover" class="popovers" data-placement="top" data-content="Slope">&nbsp;Slp</label>
+                                 <select style="width:50px" id="selectslp"><option value="0">=</option><option value="1">&gt;</option><option value="2">&lt;</option></select>
+                                 <input class="span4" type="text" id="sfslp" placeholder="[Slope]°" style="width:80px"/>
+                             </div>             
+                         </div>
+                         <div style="height:30px;padding-top:10px">
+		                <span class="help-block pull-left">
+		                    	点击 <a data-trigger="hover" class="popovers" data-placement="top" data-content="Choose the field and fill the queries in textboxes to select features."><i class="icon-info-sign"></i></a>获得帮助.
+					    </span>
+					    <button id="researchf" class="btn btn-danger pull-right" style="margin-left:2px">重置</button>
+					    <button id="searchf" class="btn btn-info pull-right" style="margin-left:2px">查询</button>
+					</div>
+				    </div>
+				    <div class="caption" style="color:#555;font-size:14px;line-height:9px"><i class="icon-cogs" style="margin-left:7px;"></i>BMPs配置</div>
+				    <div class="infodivpart" style="height:160px">
+				        <div class="modal-body-set">
+				            <a class="squaredselect" href="#" id="bmp_1" onmouseover="displayBMPname('aas', 'show');" onmouseout="displayBMPname('aas', 'hide');"><img id="imgaa" src="../img/image/BMPdixiaolin-s.png"><input type="checkbox" onclick="setBMP_rule('1')" id="squared1" name="check" value="1"><label for="squared1"></label></a>
+	                        <a class="squaredselect" href="#" id="bmp_2" onmouseover="displayBMPname('bbs', 'show');" onmouseout="displayBMPname('bbs', 'hide');"><img id="imgbb" src="../img/image/BMPdenggaocgd-s.png"><input type="checkbox" id="squared2" name="check" value="2"><label for="squared2"></label></a>
+	                        <a class="squaredselect" href="#" id="bmp_3" onmouseover="displayBMPname('ccs', 'show');" onmouseout="displayBMPname('ccs', 'hide');"><img id="imgcc" src="../img/image/BMPcaoguanqiao-s.png"><input type="checkbox" id="squared3" name="check" value="3"><label for="squared3"></label></a>
+	                        <a class="squaredselect" href="#" id="bmp_4" onmouseover="displayBMPname('dds', 'show');" onmouseout="displayBMPname('dds', 'hide');"><img id="imgdd" src="../img/image/BMPxiaoxuebocao-s.png"><input type="checkbox" id="squared4" name="check" value="4"><label for="squared4"></label></a>
+	                        <a class="squaredselect" href="#" id="bmp_5" onmouseover="displayBMPname('ees', 'show');" onmouseout="displayBMPname('ees', 'hide');"><img id="imgee" src="../img/image/BMPchgypgt-s.png"><input type="checkbox" id="squared5" name="check" value="5"><label for="squared5"></label></a>
+	                        <a class="squaredselect" href="#" id="bmp_6" onmouseover="displayBMPname('ffs', 'show');" onmouseout="displayBMPname('ffs', 'hide');"><img id="imgff" src="../img/image/BMPfengjin-s.png"><input type="checkbox" id="squared6" name="check" value="6"><label for="squared6"></label></a>
+						</div>
+						<div class="modal-footer-set">
+							<div style="display:none" class="pull-left" id="aas">BMP:<b>低效林改造</b></div>
+                            <div style="display:none" class="pull-left" id="bbs">BMP:<b>等高草灌带</b></div>
+                            <div style="display:none" class="pull-left" id="ccs">BMP:<b>草灌乔混交</b></div>
+                            <div style="display:none" class="pull-left" id="dds">BMP:<b>小穴播草</b></div>
+                            <div style="display:none" class="pull-left" id="ees">BMP:<b>茶果园坡改梯</b></div>
+                            <div style="display:none" class="pull-left" id="ffs">BMP:<b>封禁</b></div>
+						</div>
+                        <button id="cancel" class="btn btn-small pull-right" id=""><i class="icon-off"></i></button>
+                        <button id="ruleok" class="btn btn-small btn-primary pull-right" id=""><i class="icon-ok"></i></button>
+		            </div>
+		        	<div>
+						<p style="line-height:9px;margin-left:10px;color:#555">总产沙量</p>
+						<p id="resultinfo" style="padding:5px;background:#eee;border-radius:5px;margin-left:10px;font-size:20px;color:#4499ff;float:left"></p>
+						<button class="btn btn-small" style="margin:0 5px 0 10px" id="refreshguage"><i class="icon-refresh"></i></button>
+						<button class="btn btn-small" style="margin:0 5px 0 0;float:right" id="moreinfo">查看更多</button>
+					</div>
+		        </div>
+							</div>
+						</div>
+				</div>
+           </div>
+		
+         
+            
+<!-- footer -->
+	<div class="footer">
+		<div class="footer-inner">
+			2015 &copy; IGSNRR <a>GHR</a>
+		</div>
+		<div class="footer-tools">
+			<span class="go-top">
+			<i class="icon-angle-up"></i>
+			</span>
+		</div>
+	</div>
+	
+	<script src="../tools/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-ui.custom.min.js" type="text/javascript"></script> 
+	<script src="../tools/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.cookie.js" type="text/javascript"></script> 
+	  
+	<script src="../tools/app.js" type="text/javascript"></script>
+	<script src="../tools/index.js" type="text/javascript"></script>
+	
+    <script src="../js/menu.js"></script>
+    <script src="../JSON/BMPsparam_JSON.js"></script>
+    <script src="../js/readBMPsparam.js"></script>
+	<script src="../js/alertcss.js"></script>
+	<script src="../tools/ol/ol.js"></script>
+    <script src="../tools/ol/ol3-layerswitcher.js"></script>
+    <script src="../js/layers/field.js"></script>
+    <script src="../js/layers/field_style.js"></script>
+    <script src="../js/layers/layers.js" type="text/javascript"></script> 
+    <script src="../js/popup_rules.js"></script>
+    <script src="../js/display.js"></script>
+    <script src="../js/readjson.js"></script>
+	<script>
+		$(document).ready(function() {    
+		   App.init(); 
+		   fobj=$.ajax({url:"/SA_Online/ReadPol_Sed",async:false});
+		   dataview = (fobj.responseText / 1000).toFixed(3);
+		   $("#resultinfo").html(dataview + "<small style='font-size:18px'> t(吨)</small>");
+		});
+		$("#moreinfo").click(function() {
+			window.open('attach/Running.html', 'Result', 'height=550, width=900, top=50, left=200, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');
+		})	
+		$("#refreshguage").click(function() {
+			fobj=$.ajax({url:"/SA_Online/ReadPol_Sed",async:false});
+			dataview = (fobj.responseText / 1000).toFixed(3);
+			$("#resultinfo").html(dataview + "<small style='font-size:18px'> t(吨)</small>");
+	})
+	</script>
+</body>
+</html>
+

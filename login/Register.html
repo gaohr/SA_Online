@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1">
+		<title>SA_Online Register</title>
+		<link href="../../css/bootstrap/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/bootstrap/bootstrap.combined.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/style/style.css" rel="stylesheet" type="text/css">
+		<link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="../../css/promo.css" rel="stylesheet" type="text/css"/>
+		<link href="../../css/component.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="../../css/login.css" type="text/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../img/earth.png">
+	</head>
+	<body style="width:80%;">
+		<div class="row-fluid" style="margin-top:10%;margin-left:10%">
+			<div class="span8 animated" style="text-align:left">
+				<p style="font-size:45px;margin-left:90px;color:white;font-family:'华文中宋';opacity:0.8"><b>在线式流域管理措施<span style="color:#0055aa">情景分析</span></b></p>
+				<div class="promo-page-text" style="line-height:200%;font-size:18px">
+					<p>&nbsp;&nbsp;<img src="../../img/icon/pushpin.png">SEIM 空间全分布式水文模型</p>
+					<p>&nbsp;&nbsp;<img src="../../img/icon/pushpin.png">流域管理措施库及其空间关系知识库</p>
+					<p>&nbsp;&nbsp;<img src="../../img/icon/pushpin.png">情景优化配置工具</p>
+					<p>&nbsp;&nbsp;<img src="../../img/icon/pushpin.png">流域综合效益评价</p>
+					<p>&nbsp;&nbsp;<img src="../../img/icon/pushpin.png">在线交互式操作</p>
+				</div>
+			</div>
+			<div class="span4">
+				<h1>账号注册</h1>
+			<div class="connect">
+				<p>Create an account</p>
+			</div>
+			<form action="/SA_Online/Register" method="post" name="registerForm">
+				<div>
+					<input type="text" name="username" class="username" placeholder="您的用户名">
+				</div>
+				<div>
+					<input type="password" name="password" class="password" placeholder="输入密码">
+				</div>
+				<div>
+					<input type="password" name="confirmpassword" class="confirm_password" placeholder="再次输入密码">
+				</div>
+				<div>
+					<input type="text" name="phonenumber" class="phone_number" placeholder="手机号码">
+				</div>
+				<div>
+					<input type="text" name="email" class="email" placeholder="邮箱地址">
+				</div>
+				<button id="submit" type="submit">注 册</button>
+			</form>
+			<a href="Login.html">
+				<button type="button" class="register-tis">已经有账号？</button>
+			</a>
+			</div>
+		</div>
+		<script src="../../tools/jquery/jquery-1.10.1.min.js"></script>
+		<script src="../../tools/jquery/jquery.cookie.js"></script>
+		<script src="../../js/login/register.js"></script>
+	</body>
+</html>

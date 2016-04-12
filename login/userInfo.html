@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1">
+		<title>iFood</title>
+		<link href="../css/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/bootstrap.combined.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../css/login.css" type="text/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../img/iFoodicon.png">
+	</head>
+	<body>
+		<div id="user-container" style="margin:5%">
+			<div class="portlet box grey">
+					<div class="portlet-title">
+						<div class="caption" style="color:#fff"><i class="icon-user"></i>个人信息</div>
+						<a href="Login.html" class="btn btn-small pull-right" id="username-re" style="padding:0.3em 1em">切换账号</a>
+					</div>
+					<div class="portlet-body" style="color:#777">
+						<div class="row-fluid">
+  							<div class="span3">
+  								<img alt="user-image" src="../img/user-b.png" style="width:60%;margin-left:1em;padding:5px;border:1px solid #88f;border-radius:5px">
+  							</div>
+  							<div class="span9">
+  								登录名：<p id="name" style="float:right;margin-right:2em;color:#88f"></p>
+  							</div>
+						</div>
+						<br><br>
+						<div class="row-fluid">
+							<div class="span4">
+								<label style="margin-left:1em;">电话：</label>
+								<hr>
+								<label style="margin-left:1em;">邮箱：</label>
+							</div>
+  							<div class="span8">
+  								<p id="tel" style="color:#999"></p>
+  								<hr>
+  								<p id="email" style="color:#999"></p>
+  							</div>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<a href="index.html" class="btn" style="padding:1em 1em">返回</a>
+		</div>
+		
+		<script src="../js/jquery-1.10.1.min.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/userinfo.js"></script>
+	</body>
+</html>

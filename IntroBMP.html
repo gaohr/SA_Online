@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="cn"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="高会然" content=""/>
+	<title>BMPs Introduction</title>
+	
+	<link href="../css/bootstrap/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+	<link rel="stylesheet" href="../css/ol/ol.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/layout.css" type="text/css"/>
+	<link href="../css/switchdemo.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../css/component.css" />
+	
+	<link rel="shortcut icon" href="../img/earth.png" />
+
+<!-- 顶部 -->
+</head>
+<body class="page-header-fixed">
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html" style="color:#1E90FF; font-size:32px;text-decoration:none">
+				<img src="../img/earth.png" alt="logo"/>Scenario Analysis Online
+				</a>
+				<!-- 响应式菜单 -->
+				<a href="javascript:;" class="btn-navbar collapsed icon-list" data-toggle="collapse" data-target=".nav-collapse"></a>
+				<ul class="nav pull-right">
+					<li class="dropdown" id="header_notification_bar">
+						<li class="dropdown user">
+						<a href="#" data-toggle="dropdown" id="userin">
+							<img alt="name" id="userhead-in" src="" width="32"/>
+							<span class="username" id="username-in">User</span>
+							<i class="icon-angle-down"></i>
+						</a>
+						<a href="#" id="userout">
+							<img alt="name" id="userhead-out" src="" width="32"/>
+							<span class="username" id="username-out"></span>
+						</a>
+						<ul class="dropdown-menu" id="usermenu">
+							<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+							<li><a href="#"><i class="icon-calendar"></i> My Data</a></li>
+							<li><a href="#"><i class="icon-envelope"></i> My Work</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> My Result</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-lock"></i> Lock Screen</a></li>
+							<li><a href="login/Login.html"><i class="icon-key" id="logout"></i> Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+				
+<div class="page-container">
+	<!-- 左边栏 -->
+	<div class="page-sidebar nav-collapse collapse" id="menu-left"><input id="sign" value="bmps"></div>
+</div>
+<!-- 页面 -->
+    <div class="page-content">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span8"><h4 style="font-family:方正姚体">治理措施</h4></div>
+				<div class="span4">
+					<a id="modal-03" title="配置BMPs" class="btn smallbtn" style="margin-top:25px"href="#modal-container-03" role="button" data-toggle="modal">
+					    <i class="icon-circle-arrow-right" style="font-size:18px"></i>
+					</a>
+					<div id="modal-container-03" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header" style="background:#99CCFF">
+					<h3 id="myModalLabel">配置BMPs</h3>
+				</div>
+				<div class="modal-header"><h6>管理措施情景设置</h6></div>
+				<div class="modal-body"> 
+				    <div class="row-fluid">
+							<a href="SingleConfig.html" class="icon-btn span6"><i class="icon-cog"></i><h4>Single Config</h4></a>
+							<a href="Multi-Config.html" class="icon-btn span6"><i class="icon-cogs"></i><h4>Multi-Config</h4></a>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn red" data-dismiss="modal" aria-hidden="true">Close</button> 
+					<button class="btn blue">OK</button>
+				</div>
+			</div>
+			</div>
+			</div>
+				<div class="row-fluid">
+					<div class="span9">
+						<div class="breadcrumb"><b>治理措施简介</b></div>
+						<div class="row-fluid">
+							<div class="span8">
+							<h6 style="line-height:22px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;流域模型可以模拟流域的自然过程，如产流、汇流、产沙等，治理措施的实施会对这些过程产生一定的影响，
+							这种影响可以通过修改流域模型中的相关参数来实现。流域模型多采用SCS曲线方法估算每个单元的径流量，利用此类模型表达治理措施只需修改少量参数。<br>
+						    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基于各种治理措施的功能，识别治理措施影响到的水文和侵蚀过程，选择流域模型中相关的参数来体现它们影响到的过程，
+						              在此利用修改参数的方法基于<a href="../html/attach/IntroSEIM.html"><code>空间全分布式模型SEIM</code></a>表达了封禁、草灌乔混交、低效林改造、等高草灌带
+						              、小穴播草、茶果园坡改梯等治理措施。根据其治理模式分为工程与非工程两大类。</h6>
+						    </div>
+						    <div class="span4">
+						        <img alt="" src="http://zhulj-blog.oss-cn-beijing.aliyuncs.com/SEIMS_Online/SA_Online/BMPbiaoda.png">
+						    </div>
+						</div> 
+				                         <div class="row-fluid gridna" style="padding:10px;background:#fafafa;border:1px solid #ddd;border-radius:10px">
+				                             <div class="span2"></div>
+							                 <div class="span4" style="text-align:center">
+							                     <figure class="effect-sadie" onclick="javascript:window.location.href='EngineBMP.html' ">
+		                                             <img src="../img/image/BMPengine.png"/>
+		                                             <figcaption><h4>工程措施</h4></figcaption>			
+	                                             </figure>
+	                                             <div style="font-family:Microsoft YaHei"><h4>工程措施</h4></div>
+							                 </div>
+							                 <div class="span4" style="text-align:center">
+							                     <figure class="effect-sadie" onclick="javascript:window.location.href='EngineNonBMP.html' ">
+		                                             <img src="../img/image/BMPnonengine.png"/>
+		                                             <figcaption><h4>非工程措施</h4></figcaption>			
+	                                             </figure>
+	                                             <div style="font-family:Microsoft YaHei"><h4>非工程措施</h4></div>
+							                 </div>
+							                 <div class="span2"></div>
+					                     </div>
+					                     <p style="color:#555">&nbsp;&nbsp;&nbsp;&nbsp;点击查看工程措施与非工程措施详细信息。</p>
+							</div>
+							<div class="span3">
+									<a href="#" class="btn red" style="width:100%"><i class="icon-briefcase" style="font-size:24px"></i></a>
+								<h4>治理措施</h4>
+								<ul class="unstyled blog-images">
+									<li><a href="#" title=""><img alt="" src="../img/image/BMPdixiaolin-s.png"></a></li>
+									<li><a href="#" title=""><img alt="" src="../img/image/BMPdenggaocgd-s.png"></a></li>
+									<li><a href="#" title=""><img alt="" src="../img/image/BMPcaoguanqiao-s.png"></a></li>
+									<li><a href="#" title=""><img alt="" src="../img/image/BMPxiaoxuebocao-s.png"></a></li>
+									<li><a href="#" title=""><img alt="" src="../img/image/BMPchgypgt-s.png"></a></li>
+									<li><a href="#" title=""><img alt="" src="../img/image/BMPfengjin-s.png"></a></li>
+									<li><a href="#" title=""></a>...</li>
+								</ul>
+								<div class="space20"></div>
+								<h4>分类列表</h4>
+								<div class="tabbable tabbable-custom">
+									<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="#tab_1_1">非工程</a></li>
+										<li class=""><a data-toggle="tab" href="#tab_1_2">工程</a></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab_1_1" class="tab-pane active">
+											<a href="EngineNonBMP.html"><i class="icon-cog"></i>低效林改造</a><br>
+								            <a href="EngineNonBMP.html"><i class="icon-cog"></i>等高草灌带</a><br>
+								            <a href="EngineNonBMP.html"><i class="icon-cog"></i>草灌乔混交</a><br>
+								            <a href="EngineNonBMP.html"><i class="icon-cog"></i>小穴播草</a><br>
+								            <a href="EngineNonBMP.html"><i class="icon-cog"></i>封禁</a><br>
+										</div>
+										<div id="tab_1_2" class="tab-pane">
+											<a href="EngineBMP.html"><i class="icon-cog"></i>茶果园坡改梯</a><br>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+           </div>
+		
+         
+            
+<!-- footer -->
+	<div class="footer">
+		<div class="footer-inner">
+			2015 &copy; IGSNRR <a>GHR</a>
+		</div>
+		<div class="footer-tools">
+			<span class="go-top">
+			<i class="icon-angle-up"></i>
+			</span>
+		</div>
+	</div>
+	
+	<script src="../tools/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-ui.custom.min.js" type="text/javascript"></script> 
+	<script src="../tools/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	
+	<script src="../tools/jquery/jquery.slimscroll.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.blockui.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.cookie.js" type="text/javascript"></script>  
+	<script src="../tools/jquery/jquery.uniform.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.sparkline.min.js" type="text/javascript"></script> 
+	<script src="../tools/jquery/jquery.akordeon.js" type="text/javascript"></script> 
+	<script src="../js/menu.js"></script>
+	<script src="../tools/app.js" type="text/javascript"></script>
+	<script src="../tools/index.js" type="text/javascript"></script>
+    
+	<script>
+		jQuery(document).ready(function() {    
+		   App.init(); 
+		});
+	</script>
+</body>
+</html>
+

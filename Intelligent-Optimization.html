@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="cn"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="高会然" content=""/>
+	<title>Intelligent Optimization</title>
+	<link href="../css/bootstrap/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/jquery/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="../css/uniform.default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	
+	<link href="../css/jquery/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/jquery/jquery.fileupload-ui.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/select_metro.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="../css/component.css">
+	<link rel="shortcut icon" href="../img/earth.png" />
+
+<!-- 顶部 -->
+</head>
+<body class="page-header-fixed">
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html" style="color:#1E90FF; font-size:32px;text-decoration:none">
+				<img src="../img/earth.png" alt="logo"/>Scenario Analysis Online
+				</a>
+				<!-- 响应式菜单 -->
+				<a href="javascript:;" class="btn-navbar collapsed icon-list" data-toggle="collapse" data-target=".nav-collapse"></a>
+				<ul class="nav pull-right">
+					<li class="dropdown" id="header_notification_bar">
+						<li class="dropdown user">
+						<a href="#" data-toggle="dropdown" id="userin">
+							<img alt="name" id="userhead-in" src="" width="32"/>
+							<span class="username" id="username-in">User</span>
+							<i class="icon-angle-down"></i>
+						</a>
+						<a href="#" id="userout">
+							<img alt="name" id="userhead-out" src="" width="32"/>
+							<span class="username" id="username-out"></span>
+						</a>
+						<ul class="dropdown-menu" id="usermenu">
+							<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+							<li><a href="#"><i class="icon-calendar"></i> My Data</a></li>
+							<li><a href="#"><i class="icon-envelope"></i> My Work</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> My Result</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-lock"></i> Lock Screen</a></li>
+							<li><a href="login/Login.html"><i class="icon-key" id="logout"></i> Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+				
+<div class="page-container">
+	<!-- 左边栏 -->
+	<div class="page-sidebar nav-collapse collapse" id="menu-left"><input id="sign" value="config"></div>
+</div>
+<!-- 页面 -->
+    <div class="page-content" style="background:#eee">
+		<div class="container-fluid">
+			<h3 style="margin-left:10px;height:24px;line-height:18px;font-family:方正姚体">自动优化配置<small>&nbsp;&nbsp;智能优化模型</small></h3>
+                    <div class="row-fluid" style="border:1px solid #bbb;border-radius:5px;background:#fff">
+					    <div class="span6">
+					    	<h5 style="margin:5px;margin-left:15px">智能优化模型参数输入</h5>
+					    	<div style="border:1px solid #bbb;margin:5px;border-radius:5px">
+								<form action="#" id="form_sample_2" class="form-horizontal">
+									<div class="control-group" style="margin-top:5px;height:20px">
+										<label class="control-label">优化代数：<span class="required">*</span></label>
+										<div class="controls"><input type="text" id="generation" class="span4" value="70"/></div>
+									</div>
+									<div class="control-group" style="margin-top:5px;height:20px">
+										<label class="control-label">种群规模：<span class="required">*</span></label>
+										<div class="controls"><input type="text" id="population" class="span4" value="80"/><span style="color:#aaa">（4的倍数）</span></div>
+									</div>
+									<!-- <div class="control-group" style="margin-top:5px;height:20px">
+										<label class="control-label">基准情景产沙量：<span class="required">*</span></label>
+										<div class="controls"><input type="text" id="jzhsand" class="span4" value="(option)"/><button class="btn smallbtn"><i class="icon-upload-alt" style="color:green"></i></button></div>
+									</div> -->
+								</form>
+							</div>
+								<div class="form-actions" style="text-align:center;margin-top:10px;padding:10px">
+									<button id="run_opt" class="btn btn-info">运行</button>
+									<button class="btn">取消</button>
+								</div>
+						</div>
+						<div id="runmask" style="display:none;position:absolute;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.6);z-index:999">
+     							<div style="position:absolute;top:24%;left:32%;height:120px;width:450px;padding:10px;background:rgba(255,255,255,0.9);text-align:center;border-radius:5px">
+     								<div class="container-fluid">
+     									<div class="row-fluid">
+     										<div class="span3">
+     											<img src="http://zhulj-blog.oss-cn-beijing.aliyuncs.com/SEIMS_Online/SA_Online/icon/loading_w.gif" width="60px" float="right">
+     										</div>
+     										<div class="span9">
+     											<p style="color:#00bfff;font-size:16px;font-family:华文琥珀;float:left">正在运行模型，请稍等……</p>
+     										</div>
+     										<img src="../img/icon/running.gif">
+     									</div>
+     								</div>
+     								<br>
+     							<button class="btn" id="hidemask">后台运行</button>
+     						</div>
+     					</div>
+					    <div class="span6">
+					    	<div style="height:180px;margin:10px;color:green;box-shadow:2px 2px 2px #aaa">
+									<h4 class="alert-heading" style="margin:10px">智能优化参数介绍</h4>
+									<ul>
+										<li><p style="margin:5px">优化代数：终止条件，用来判断算法是否可以终止；</p></li>
+										<li><p style="margin:5px">种群规模：群体中个体的个数；</p></li>
+										<li><p style="margin:5px">基准情景中的产沙量：在无治理措施配置情况下的情景运行结果产沙量。</p></li>									
+									</ul>
+									<a href="#" data-trigger="hover" class="panel-right-btn popovers" data-placement="right" data-content="Click to learn more information about Optimization parameters of SEIM"><i class="icon-info-sign">了解更多</i></a>
+								</div>	
+                            
+                        </div>
+                        </div>
+                        <h5 style="margin:10px">关于智能优化配置模型<a id="button" href="#" data-trigger="hover" class="panel-right-btn popovers" data-placement="right" data-content="Click to learn more information about Optimization of SEIM"><i class="icon-info-sign"></i>了解更多</a></h5>
+                        <div style="position:absolute;width:auto;height:auto;text-align:center;opacity:0.5">
+							<img src="../img/image/NSGA-II.png" width="36%">
+						</div>
+						<div class="toggler">
+ 							<div id="effect" class="ui-widget-content ui-corner-all">
+ 							<a id="hide" class="pull-left"  href="#" style="margin-top:10px;margin-left:10px;text-decoration: none;"><i class="icon-chevron-right"></i><i class="icon-chevron-right"></i></a>
+    							<h3 class="ui-widget-header ui-corner-all">情景智能优化</h3>
+    							<p>
+      								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在流域中进行治理措施空间配置优化问题实际上是由环境效益和经济效益等多个因素相互影响、相互冲突的多目标优化问题。因此，可利用智能优化算法，对每一个地块可考虑管理措施库中所有可能的措施，自动进行全局寻优。这种情景优化方式无需用户明确设定情景，规划的粒度精细（如本文中的地块级别，乃至模拟单元级别），
+	                                                                                     较前述的基于关键源区的治理目标配置方法、基于土地利用类型设计情景的方法而言，用户干预少。但相应地计算量大，如果不借助算法优化或是并行计算，耗时可能非常长。此外，这种方式得出的最佳管理措施可能是较为复杂的措施组合，实施难度可能较基于关键源区的治理目标配置方法所得管理措施组合要大。<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在多目标优化决策中，由于各目标往往是相互冲突的，不存在使所有目标同时达到最优的解，而是存在一个解集，这些解之间对全体目标函数而言是无法比较优劣的，也就是说，无法在改进任何目标函数的同时而不削弱至少一个其他目标函数，这些解被称为非支配解（nondominated solutions）或Pareto最优解（Pareto optimal solutions）。
+                                                                                                  基于种群操作的演化算法因其具有的智能型、隐并行性等特点，可以搜索解空间的多个解，并能利用不同解之间的相似性来提高其并发求解问题效率。演化算法的出现为多目标优化问题带来了新的思想和途径。选择一个典型的多目标遗传算法ε-NSGA-II算法（Epsilon Non-dominated Sorted Genetic Algorithm）来解决治理措施空间配置的多目标优化问题。<br>
+                            <a href="" style="margin-left:80%;fot-size:18px"><b>Learn More!</b></a>
+    							</p>
+  							</div>
+						</div>
+				</div>
+           </div>
+		
+            
+<!-- footer -->
+	<div class="footer">
+		<div class="footer-inner">
+			2015 &copy; IGSNRR <a>GHR</a>
+		</div>
+		<div class="footer-tools">
+			<span class="go-top">
+			<i class="icon-angle-up"></i>
+			</span>
+		</div>
+	</div>
+	
+	<script src="../tools/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script> 
+	<script src="../tools/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.cookie.js" type="text/javascript"></script> 
+	
+	<script src="../js/menu.js"></script>
+	<script src="../js/tables/select.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.panelslider.min.js"></script>
+	<script src="../tools/jquery/jquery.ui.widget.js"></script>
+	<script src="../tools/tmpl.min.js"></script>
+	<script src="../tools/app.js" type="text/javascript"></script>
+	<script src="../tools/form-validation.js" type="text/javascript"></script>
+	<script>
+		jQuery(document).ready(function() {
+			App.init();
+			function runEffect() {
+		  		var options = {};
+		  		$( "#effect" ).show( "fold", options, 1000, callback );
+			};
+			function callback() {
+		  		$( "#hide" ).click(function() {
+		    		$( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+		  		});
+			};
+		  	$( "#button" ).click(function() {
+		    	runEffect();
+		  	});
+			$( "#effect" ).hide();
+		});
+	</script>
+</body>
+</html>
+

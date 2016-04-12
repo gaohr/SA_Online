@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="cn" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="高会然" content=""/>
+	<title>Critical zone</title>
+	<link href="../css/bootstrap/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/style/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="../css/style/uniform.default.css" rel="stylesheet" type="text/css"/>
+	
+	<link rel="stylesheet" href="../css/ol/ol3-layerswitcher.css">
+	<link rel="stylesheet" href="../css/ol/ol.css" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../css/geoservermap.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/component.css"/>
+	
+	<link rel="shortcut icon" href="../img/earth.png" />
+
+<!-- 顶部 -->
+</head>
+<body class="page-header-fixed">
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html" style="color:#1E90FF; font-size:32px;text-decoration:none">
+				<img src="../img/earth.png" alt="logo"/>Scenario Analysis Online
+				</a>
+				<!-- 响应式菜单 -->
+				<a href="javascript:;" class="btn-navbar collapsed icon-list" data-toggle="collapse" data-target=".nav-collapse"></a> 
+				
+				<ul class="nav pull-right">
+					<li class="dropdown" id="header_notification_bar">
+						<li class="dropdown user">
+						<a href="#" data-toggle="dropdown" id="userin">
+							<img alt="name" id="userhead-in" src="" width="32"/>
+							<span class="username" id="username-in">User</span>
+							<i class="icon-angle-down"></i>
+						</a>
+						<a href="#" id="userout">
+							<img alt="name" id="userhead-out" src="" width="32"/>
+							<span class="username" id="username-out"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+							<li><a href="#"><i class="icon-calendar"></i> My Data</a></li>
+							<li><a href="#"><i class="icon-envelope"></i> My Work</a></li>
+							<li><a href="#"><i class="icon-tasks"></i> My Result</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-lock"></i> Lock Screen</a></li>
+							<li><a href="login/Login.html"><i class="icon-key" id="logout"></i> Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+				
+<div class="page-container">
+	<!-- 左边栏 -->
+	<div class="page-sidebar nav-collapse collapse" id="menu-left"><input id="sign" value="config"></div>
+</div>
+<!-- 页面 -->
+    <div class="page-content" style="background:#f5f5f5;">
+		<div class="container-fluid" style="margin-left:-20px">
+					<h4 style="margin-left:10px;height:12px;line-height:12px;font-family:方正姚体">按关键源区配置治理目标</h4>
+						<div class="row-fluid">
+							<div class="span9">
+							<div class="row-fluid" style="width:102%">
+								<div class="span10">
+                                    <div id="map_f">
+                                        <div id="popup" class="ol-popup">
+                                            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                                            <a href="#" id="popup-ok" class="ol-popup-ok"></a>
+                                            <div id="BMP-content"></div>
+                                        </div>  
+                                    </div>
+                                </div> 
+                                <div class="span2">
+                                	<div class="graphdiv" style="height:339px;padding:3px 3px 0 6px;margin-left:-20px;color:#99ff99;background:#333;overflow:auto">
+                                		<div style="text-align:center">FID-BMP</div>
+                                		<div id="bmpstr"></div>
+                                	</div>
+                                </div>
+				            </div>
+				        <div class="portlet box light-grey graphesdiv">
+				        <div style="height:5px"></div>
+								<div style="height:200px;background:#e5e5e5">
+									<div class="row-fluid">
+								        <div class="span5 graphdiv">
+								            <p>减沙量-费用（x-费用；y-减沙量）</p>
+								            <div id="site_statistics_loading_1">
+										        <img src="../img/icon/loading.gif" alt="loading" />
+									        </div>
+									        <div id="chart_1" style="height:160px"></div>
+								        </div>
+								        <div class="span5 graphdiv" style="height:200px;margin-left:15px">
+								            <p>各项指标雷达图</p>
+								            <div id="site_statistics_loading_2">
+										        <img src="../img/icon/loading.gif" alt="loading"/>
+									        </div>
+									        <div id="radar_1"><canvas id="canvas"></canvas></div>
+								        </div>
+								        <div class="span2">
+								        	<div id="" class="graphdiv" style="width:105%;height:200px;padding:5px 5px 0 10px;margin-left:-10px;background:#fff;overflow:auto"></div>
+								        </div>
+								    </div>
+								</div>
+				        </div>
+			        </div> 
+				<div class="span3">
+				<div class="infodiv" style="height:590px">
+					<div class="infodiv-title">
+				    	<div class="pull-left"><i class="icon-list"></i>情景配置</div>
+				    	<div class="pull-right">
+							<button id="refresh_c" style="margin-top:32px" class="btn btn-small btn-danger tooltips" data-placement="bottom" data-original-title="点击重设"><i class="icon-refresh"></i></button>									
+						</div>
+				    </div>
+		                <div class="tabbable tabbable-custom" style="height:515px;margin:5px">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#tab_1_1" data-toggle="tab">空间逐地块</a></li>
+								<li><a href="#tab_1_2" data-toggle="tab">按属性规则</a></li>
+							</ul>
+							<div class="tab-content">
+							    <div class="tab-pane active" id="tab_1_1">
+									<div class="row-fluid">
+					                     <div class="span7">
+					                        <div class="form-inline" id="FIDlist" style="height:420px;overflow-y:scroll"></div>
+					                     	<div style="height:5px"></div>
+					                     	<button id="resetselect" class="btn btn-small" style="margin-left:20px"><i class=" icon-check-empty"></i>&nbsp;取消选择</button>
+										</div>
+										<div class="span5">
+				                            <div class="modal-set-GJ">
+				                                <a class="roundselect" href="#" onclick=""><img id="imga1" src="../img/image/BMPdixiaolin-s.png"><input type="radio" id="squared1-1" name="radios" value="1"><label for="squared1-1"></label><br>低效林改造<br></a>
+	                                            <a class="roundselect" href="#" onclick=""><img id="imgb1" src="../img/image/BMPdenggaocgd-s.png"><input type="radio" id="squared1-2" name="radios" value="2"><label for="squared1-2"></label><br>等高草灌带<br></a>  
+	                                            <a class="roundselect" href="#" onclick=""><img id="imgc1" src="../img/image/BMPcaoguanqiao-s.png"><input type="radio" id="squared1-3" name="radios" value="3"><label for="squared1-3"></label><br>草灌乔混交<br></a>
+	                                            <a class="roundselect" href="#" onclick=""><img id="imgd1" src="../img/image/BMPxiaoxuebocao-s.png"><input type="radio" id="squared1-4" name="radios" value="4"><label for="squared1-4"></label><br>小穴播草<br></a>
+	                                            <a class="roundselect" href="#" onclick=""><img id="imge1" src="../img/image/BMPchgypgt-s.png"><input type="radio" id="squared1-5" name="radios" value="5"><label for="squared1-5"></label><br>茶园坡改梯<br></a>
+	                                            <a class="roundselect" href="#" onclick=""><img id="imgf1" src="../img/image/BMPfengjin-s.png"><input type="radio" id="squared1-6" name="radios" value="6"><label for="squared1-6"></label><br>封禁<br></a> 
+							                   	<div style="height:10px"></div>
+							                   	<button class="btn btn-small btn-primary" id="criticalok_s"><i class="icon-ok"></i>确定</button>
+							                </div>
+				                        </div>
+				                    </div>
+				                </div>
+								<div class="tab-pane" id="tab_1_2">
+								    <div style="height:452px">
+										<label class="pull-right"><input type="radio" name="sradio" checked value="or">Or</label>
+										<label class="pull-right" style="margin-left:5px"><input type="radio" name="sradio" value="and">And</label><br>
+			                            
+                         <div class="row-fluid form-inline" id="fielddivs" style="border-bottom:1px solid #999;overflow:auto">
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="fid" checked="checked"/>
+                             	 <label for="fid">&nbsp;FID</label>
+                                 <select style="width:50px" id="selectid"><option value="0">=</option></select>
+                                 <input class="span4" type="text" id="sfid" placeholder="[FID]" style="width:80px"/>
+                             </div>
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="area" checked="checked"/>
+                             	 <label for="area">&nbsp;Area</label>
+                                 <select style="width:50px" id="selectarea"><option value="0">=</option><option value="1">&gt;</option><option value="2">&lt;</option></select>
+                                 <input class="span4" type="text" id="sfarea" placeholder="[Area]㎡" style="width:80px"/>
+                             </div> 
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="landuse" checked="checked"/>
+                             	 <label for="landuse">&nbsp;LUse</label>
+                                 <select style="width:50px" id="selectlanduse"><option value="0">=</option></select>
+                                 <input class="span4" type="text" id="sflanduse" placeholder="[LandUse]" style="width:80px"/>
+                             </div>
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="ele" checked="checked"/>
+                             	 <label for="ele">&nbsp;Ele</label>
+                                 <select style="width:50px" id="selectele"><option value="0">=</option><option value="1">&gt;</option><option value="2">&lt;</option></select>
+                                 <input class="span4" type="text" id="sfele" placeholder="[Elevation]m" style="width:80px"/>
+                             </div>  
+                             <div class="inquiryInfo">
+                                 <input type="checkbox" id="slp" checked="checked"/>
+                             	 <label for="slp">&nbsp;Slp</label>
+                                 <select style="width:50px" id="selectslp"><option value="0">=</option><option value="1">&gt;</option><option value="2">&lt;</option></select>
+                                 <input class="span4" type="text" id="sfslp" placeholder="[Slope]°" style="width:80px"/>
+                             </div>             
+                         </div>
+                         <div style="height:30px;padding-top:10px">
+		                <span class="help-block pull-left">
+		                                                                           点击 <a data-trigger="hover" class="panel-right-btn popovers" data-placement="top" data-content="Choose the field and fill the queries in textboxes to select features."><i class="icon-info-sign"></i></a>获得帮助.
+					    </span>
+					    <button id="researchf" class="btn pull-right" style="margin-left:2px">重置</button>
+					    <button id="searchf" class="btn pull-right" style="margin-left:2px">查询</button>
+					</div>
+				    <div class="caption" style="color:#555;font-size:16px"><i class="icon-cogs" style="margin:5px;"></i>BMP配置</div>
+				    <div class="infodivpart_f" style="height:165px">
+				        <div class="modal-body-set">
+				            <a class="roundselect" href="#" id="a-aa" onmouseover="displayBMPname('aas', 'show');" onmouseout="displayBMPname('aas', 'hide');"><img id="imgaa" src="../img/image/BMPdixiaolin-s.png"><input type="radio" id="squared1" name="radior" value="1"><label for="squared1"></label></a>
+	                        <a class="roundselect" href="#" id="a-bb" onmouseover="displayBMPname('bbs', 'show');" onmouseout="displayBMPname('bbs', 'hide');"><img id="imgbb" src="../img/image/BMPdenggaocgd-s.png"><input type="radio" id="squared2" name="radior" value="2"><label for="squared2"></label></a>
+	                        <a class="roundselect" href="#" id="a-cc" onmouseover="displayBMPname('ccs', 'show');" onmouseout="displayBMPname('ccs', 'hide');"><img id="imgcc" src="../img/image/BMPcaoguanqiao-s.png"><input type="radio" id="squared3" name="radior" value="3"><label for="squared3"></label></a>
+	                        <a class="roundselect" href="#" id="a-dd" onmouseover="displayBMPname('dds', 'show');" onmouseout="displayBMPname('dds', 'hide');"><img id="imgdd" src="../img/image/BMPxiaoxuebocao-s.png"><input type="radio" id="squared4" name="radior" value="4"><label for="squared4"></label></a>
+	                        <a class="roundselect" href="#" id="a-ee" onmouseover="displayBMPname('ees', 'show');" onmouseout="displayBMPname('ees', 'hide');"><img id="imgee" src="../img/image/BMPchgypgt-s.png"><input type="radio" id="squared5" name="radior" value="5"><label for="squared5"></label></a>
+	                        <a class="roundselect" href="#" id="a-ff" onmouseover="displayBMPname('ffs', 'show');" onmouseout="displayBMPname('ffs', 'hide');"><img id="imgff" src="../img/image/BMPfengjin-s.png"><input type="radio" id="squared6" name="radior" value="6"><label for="squared6"></label></a>
+						</div>
+						<div class="modal-footer-set">
+							<div style="display:none" class="pull-left" id="aas">BMP:<b>低效林改造</b></div>
+                            <div style="display:none" class="pull-left" id="bbs">BMP:<b>等高草灌带</b></div>
+                            <div style="display:none" class="pull-left" id="ccs">BMP:<b>草灌乔混交</b></div>
+                            <div style="display:none" class="pull-left" id="dds">BMP:<b>小穴播草</b></div>
+                            <div style="display:none" class="pull-left" id="ees">BMP:<b>茶果园坡改梯</b></div>
+                            <div style="display:none" class="pull-left" id="ffs">BMP:<b>封禁</b></div>
+						</div>
+                        <button id="cancel" class="btn btn-small pull-right" id=""><i class="icon-off"></i></button>
+                        <button id="criticalok_r" class="btn btn-small btn-primary pull-right" id=""><i class="icon-ok"></i>确定</button>
+		            </div>
+		            </div>
+						</div>
+						</div>
+						<div id="runmask" style="display:none;position:absolute;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.6);z-index:999">
+     							<div style="position:absolute;top:24%;left:32%;height:120px;width:450px;padding:10px;background:rgba(255,255,255,0.9);text-align:center;border-radius:5px">
+     								<div class="container-fluid">
+     									<div class="row-fluid">
+     										<div class="span3">
+     											<img src="http://i1.tietuku.com/2242359350fceae0.gif" width="60px" float="right">
+     										</div>
+     										<div class="span9">
+     											<p style="color:#00bfff;font-size:16px;font-family:华文琥珀;float:left">正在运行模型，请稍等……</p>
+     										</div>
+     										<img src="../img/icon/running.gif">
+     									</div>
+     								</div>
+     								<br>
+     							<button class="btn" id="hidemask">后台运行</button>
+     						</div>
+     					</div>
+						<div style="height:5px"></div>
+						<button id="run_f" class="btn btn-info" title="运行模型">&nbsp;&nbsp;<i class="icon-caret-right"></i>&nbsp;&nbsp;</button>
+						<a id="viewout" href="ScenarioSet.html" class="btn pull-right" style="margin-left:5px"><i class="icon-eye-open"></i>查看结果</a>
+						<button id="save_f" class="btn pull-right" style="margin-left:5px"><i class="icon-save"></i>保存情景</button>						​
+				    </div>
+				</div>     
+			</div>
+		</div>
+	</div>
+</div>
+		
+         
+            
+<!-- footer -->
+	<div class="footer">
+		<div class="footer-inner">
+			2015 &copy; IGSNRR <a>GHR</a>
+		</div>
+		<div class="footer-tools">
+			<span class="go-top">
+			<i class="icon-angle-up"></i>
+			</span>
+		</div>
+	</div>
+	
+	<script src="../tools/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery-ui.custom.min.js" type="text/javascript"></script> 
+	<script src="../tools/jquery/jquery.cookie.js" type="text/javascript"></script>
+	<script src="../tools/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../tools/jquery/jquery.flot.js" type="text/javascript"></script> 
+	
+	<script src="../js/menu.js"></script>
+	<script src="../tools/ol/ol.js" type="text/javascript"></script>
+    <script src="../tools/ol/ol3-layerswitcher.js" type="text/javascript"></script>
+    <script src="../js/layers/field_style.js" type="text/javascript"></script>
+    <script src="../js/layers/layers.js" type="text/javascript"></script> 
+    <script src="../js/popup_f.js" type="text/javascript"></script>
+    <script src="../js/display.js" type="text/javascript"></script>
+    <script src="../tools/Chart.js" type="text/javascript"></script>
+    
+    <script src="../tools/app.js" type="text/javascript"></script>
+    <script src="../js/charts.js" type="text/javascript"></script>
+	<script>
+		jQuery(document).ready(function() {    
+		   App.init();
+		   Charts.init();
+		   Charts.initCharts();
+		   for(i = 1; i < 89; i++){
+		         $("#FIDlist").append("<div id=\"fid" + i + "\" class=\"fidlist\"><input name=\"selectfid\" type=\"checkbox\" id=\"fid_" + i + "\" onchange=\"checkboxselected(" + i + ")\" value=\"" + i + "\"/>&nbsp;<label for=\"fid_" + i + "\">FID:" + i + "</label></div>");
+			 }
+		});
+	</script>
+</body>
+</html>
+
