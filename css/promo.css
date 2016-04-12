@@ -1,0 +1,54 @@
+/***
+Promo Page
+***/
+
+.name {font-size:48px;line-height:48px;margin-left:60px;margin-top:-10px;color:#222;font-family:'华文中宋';opacity:0.8;}
+.promo-page {padding-left: 0;padding-right: 0;}
+.promo-page h1, .promo-page h2 {font-size: 50px;line-height: 60px;}
+.promo-page .btn.xlarge {font-size: 22px;padding: 7px 25px;margin: 5px 0; }
+.promo-page input.m-wrap {background: #fff;}
+/*page row options*/
+.promo-page-n {padding-left: 10%;padding-right: 10%;}
+.promo-page-n .block-transparent {padding:20px;background:rgba(255,255,255,0.2);}
+.promo-page .block-grey {height:auto;padding: 50px 20px 20px 20px;}
+.promo-page .block-blue {height: 320px;border-radius:10px;padding: 10px 10px 10px 10px;background: #94bcd3;}
+.promo-page .block-footer {padding: 30px 20px 30px 20px; background: #eeedf2;}
+.promo-page-text {width:80%;font-size:20px;color:#924216;margin-left:10%;font-family:'Microsoft YaHei';margin-top:5%;background-color:rgba(0,0,0,0.05);border-radius:50px 0 50px 0;}
+.promo-page-text img {width:28px;height:28px;margin:3px;}
+.promo-page-text img:hover {transition: all .5s;-webkit-transform:rotate(315deg);-moz-transform:rotate(315deg);rotation:315deg;}
+.promo-page-text p:hover {background:rgba(255,255,255,0.1);border-radius:50px;}
+.promo-page-text p {margin-left:10%;margin-right:80px;}
+
+.homeoption{margin-top:5%;margin-left:8%;}
+.circlebtn { display: inline-block;padding: 10px 25px;border: 1px solid #999;color: #eee;font-size:20px;font-family:"幼圆";text-decoration: none !important;margin: 15px 5px 0 5px;transition: all .2s;background: rgba(0,0,0,0.6);border-radius: 50px; } 
+.circlebtn:hover {background: rgba(255,255,255,0.2);color: #0080ff;}
+.arrowpoint{
+  -webkit-animation: floating-text 1s ease alternate infinite;
+     -moz-animation: floating-text 1s ease alternate infinite;
+      -ms-animation: floating-text 1s ease alternate infinite;
+       -o-animation: floating-text 1s ease alternate infinite;
+          -webkit-animation: floating-text 1s ease alternate infinite;
+}
+
+@-webkit-keyframes floating-text {
+  0% {  
+    -webkit-transform: translateY(.5em);
+      0 0 .1em rgba(0,0,0,.3),
+      0 .2em .1em rgba(0,0,0,.3);
+  }
+  100% {
+      0 0 .5em rgba(0,0,0,.3),
+      0 .5em .5em rgba(0,0,0,.3);
+  }
+}
+@media(max-width:690px) {
+	.name {font-size:28px;line-height:28px;margin-left:10px;}
+	.promo-page .block-grey {padding: 10px;}
+	.promo-page-text {font-size:14px;margin-top:5%;background-color:rgba(0,0,0,.0);border-radius:0;}
+	.promo-page-text img {width:14px;height:14px;margin:3px;}
+	.promo-page-text p {margin-left:5px;margin-right:5px;}
+	.circlebtn { padding: 2px 10px;font-size:18px;margin:10px;border-radius:10px; }
+	.hiden {display:none}
+}
+
+

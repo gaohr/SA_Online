@@ -1,0 +1,115 @@
+
+.ol-attribution {
+  max-width: calc(100% - 3em);
+}
+
+#tags {
+  display: none;
+}
+
+.navbar-inverse .navbar-inner {
+  background: #1F6B75;
+}
+.navbar-inverse .brand {
+  color: white;
+  padding: 5px;
+}
+
+.smallbtn {
+	height:24px;
+	padding:4px 14px;
+}
+
+
+/*mask popup*/
+.mask{
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	background-color: #ffffff; 
+	z-index: 2; 
+	display: none;
+} 
+
+div.sample_popup {
+	margin-top:5%;
+	margin-left:19.5%;
+	height:320px;
+	width:240px; 
+	border:1px solid #8080c0; 
+	border-radius:5px;
+	box-shadow:2px 2px 3px #aaa; 
+	} 
+div.menu_form_header{ 
+background: rgba(140,200,200,0.8);
+border-radius:5px; 
+} 
+div.sample_popup div.menu_form_header 
+{  
+cursor: default; 
+width:100%; 
+height: 25px; 
+line-height: 22px; 
+vertical-align: middle; 
+text-decoration: none; 
+font-family: "Times New Roman", Serif; 
+font-weight: 800; 
+font-size: 18px; 
+color: #333;
+text-align:center;
+border-radius:5px 5px 0 0;
+} 
+div.menu_form_body 
+{ 
+position:relative;
+width:100%; 
+height:150px; 
+font-size:12px; 
+color:#555;
+background:rgba(255,255,255,0.8); 
+overflow:auto;
+margin-bottom:24px;
+} 
+div.exitbtn {
+	position:absolute;
+	background: rgba(140,200,200,0.8);
+	text-align:center;
+	width:100%;
+	height:24px;
+	bottom:0;
+	border-radius:0 0 5px 5px;
+}
+
+/*DataDisplay data files*/
+.datafile {
+	margin:5px;
+	color:#555;
+}
+.datafolder {
+	margin:5px;
+	font-size:16px;
+	color:#f0c635;
+}
+
+/*alert css*/
+#dvMsgBox{display:none;position:absolute;font-size:14px;width:300px;overflow:hidden;z-index:999; border:1px solid #777;border-radius:3px;box-shadow:2px 2px 5px #aaa}  
+#dvMsgBox .top{height:25px;background:-webkit-gradient(linear, 50% 10%, 50% 100%, from(#3377dd), to(#77aaff));;padding-left:6px; float:left; width:100%;}  
+#dvMsgBox .top .right{height:100%;padding-right:6px;}  
+#dvMsgBox .top .right .title{height:100%;line-height:24px;color:#fff;vertical-align:middle;font-weight:bold;overflow:hidden;}  
+#dvMsgBox .body{background:#fff;padding:10px;min-height:100px}   
+#dvMsgBox .bottom{background:#fff;text-align:center}   
+input.alertbtn{width:56px; cursor:pointer; color:#fff; border:none; height:20px; text-align:center;background:#3377dd;border-radius:3px}  
+input.alertbtnfocus{background:#eee;width:56px;border:1px solid #aaa; height:20px; cursor:pointer; color:#555;border-radius:3px} 
+#dvMsgBtns{ text-align:center;}
+#ShowBolightBox{display:none;-moz-opacity:0.1;filter:alpha(opacity=10);opacity:0.1;background-color:#000;z-index:100;position:absolute;left:0px;top:0px;}
+
+.tdlegend {
+	transition: all .3s;
+}
+.tdlegend:hover {
+	background:#eee;
+	color:#555
+}
+
+
+

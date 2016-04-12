@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+      .ol-popup {
+        display: none;
+        position: absolute;
+        background-color:white;
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #0080ff;
+        bottom: 12px;
+        left: -50px;
+        width: 320px;
+      }
+      .ol-popup-rule {
+        display: none;
+        position: absolute;
+        background-color:white;
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #0080ff;
+        bottom: 12px;
+        left: -50px;   
+        height: auto;
+        width: 240px;
+        min-width: 100px; 
+      }
+      .ol-popup-closer {
+        text-decoration: none;
+        position: absolute;
+        background:#e19595;
+        border-radius:100px;
+        top: 2px;
+        right: 6px;
+  		transition: all 0.2s;
+      }
+      .ol-popup-closer:after {
+        content: "X";
+        padding:1px 4px;
+        color: #fff;
+        border-radius:100px;
+      }
+      .ol-popup-closer:hover {
+     	border-radius:100px;
+        background:red;
+        text-decoration: none;
+      }
+      .ol-popup-ok {
+        text-decoration: none;
+        position: absolute;
+        bottom: 18px;
+        right: 24px;
+        border-radius:10px 10px 10px 10px;
+      }
+      .ol-popup-ok:after {
+        font-weight:bold;
+        font-size:16px;
+        content: "　OK　";
+      }
+      
+      .modal-body-popup{
+          width:300px;
+          padding:10px;
+          overflow-x:auto;
+          background:-webkit-gradient(linear, 50% 50%, 50% 100%, from(#eee), to(#fff));
+          box-shadow:inset 1px 1px 1px #aaa;
+      }
+      .modal-footer-popup{
+      	  margin-top:10px;
+          padding:20px 10px;
+          height:30px;
+          text-align:right;
+          border-top:1px solid #0080ff;
+          border-radius:0 0 10px 10px;
+      }
+      .modal-body-popup img {
+      	  border-radius:5px;
+      	  border:1px solid #fff;
+      }
+      
+    .divcss5{ position:relative;width:70px; height:70px; margin:0 auto}
+    .divcss5 a,.divcss5 span{display:none; text-decoration:none}
+    .divcss5:hover{cursor:pointer}
+    .divcss5:hover a.now{cursor:pointer; position:absolute; top:0; width:100%; height:100%; z-index:100; left:0; display:block;}
+    .divcss5:hover span{ display:block;position:absolute; bottom:0; left:0;color:#FFF;width:100%; z-index:10;height:35%; line-height:27px; background:#000;filter:alpha(opacity=60);-moz-opacity:0.5;opacity: 0.5;}
+    /* 设置显示文字定位位置，背景半透明 */
+
+
+      
+      

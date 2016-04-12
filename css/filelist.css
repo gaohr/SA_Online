@@ -1,0 +1,358 @@
+@CHARSET "UTF-8";
+        h4 {
+			
+			padding: 10px;
+			padding-top:12px;
+			padding-bottom:0px;
+			margin: 0 
+			}
+		.topf {
+			width: 100%;
+			height:50px;
+			background-color:#e8e8e8;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+		.top a {
+			color: #900;
+		}
+		.top_icon {
+			margin:5px;
+			margin-left:16px;
+			float:left;
+			width:42px;
+			height:42px;
+		}
+		.top_search {
+			float:right;
+			padding:10px;
+		}
+		.search_text {
+			width:100px;
+		}
+		.top_appinfo {
+			padding: 10px;
+			padding-top:0px;
+			font-style: italic;
+		}
+
+		.filecontent {
+			display:none;
+			width: 100%;
+			color:#555;
+			background: white;
+			
+		}
+
+		.tree_div {
+			position:relative;
+			height: 100%;
+			float:left;
+			overflow:auto;
+			border-top: 1px solid #aaa;
+		}
+
+		.files_div {
+			position:relative;
+			width:100%;
+			height: 100%;
+			overflow: auto;
+			border-top: 1px solid #aaa;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		/* --- Splitter --- */
+
+		.vsplitbar {
+			width: 4px;
+			background: #d7dee3;
+			border-right: 1px solid #bbb;
+		}
+
+		/* --- File Table --- */
+
+		table.tablesorter {
+			font-family:arial;
+			background-color: #CDCDCD;
+			font-size: 10pt;
+			width: 100%;
+			text-align: left;
+			border-spacing: 0px;
+			border-bottom: 1px solid #CCC;
+		}
+		table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+			background: #FFEFCC;
+			border-left: 1px solid #CCC;
+			border-right: 1px solid #CCC;
+			padding: 4px;
+			border-left: 0px;
+		}
+		table.tablesorter thead tr .header {
+			/*background-image: url(tree_tablesorter_bg.gif);*/
+			background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+			background-repeat: no-repeat;
+			background-position: center right;
+			cursor: pointer;
+		}
+		table.tablesorter tbody td {
+			vertical-align: top;
+			background: #FFF;
+			border-bottom: none;
+			border-left: none;
+			border-right: 1px solid #CCC;
+			border-top: 1px solid #DDD;
+			padding: 3px 3px 3px 4px;
+		}
+
+		table.tablesorter tbody tr:nth-child(even) td {
+			background: #EEE;
+		}
+		table.tablesorter thead tr .headerSortUp {
+			/*background-image: url(tree_tablesorter_asc.gif);*/
+			background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+		}
+		table.tablesorter thead tr .headerSortDown {
+			/*background-image: url(tree_tablesorter_desc.gif);*/
+			background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+		}
+		table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+			background-color: #FFD283;
+		}
+
+		table.tablesorter th:last-of-type,
+		table.tablesorter td:last-of-type {
+			border-right:0px;
+		}
+
+		span.file, span.file_folder {
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAOCAYAAAAbvf3sAAAAYUlEQVR4nGNkYGBgqKmp+c+AB7S0tDCiCNTU1PzHBdavX/8f2UAmfCbDgLGxMdwVRGlA1sRCSGFAQACcffbsWeJtgAE6afj+/TtRir9//z5o/UAKYGRgYGAoLi7Gm/iQAQC+qjWGF5ecJwAAAABJRU5ErkJggg==)
+			no-repeat
+			left center;
+			padding-left:16px;
+			padding-bottom:1px;
+			padding-top:1px;
+		 }
+
+		span.file_folder {
+			background: url(data:image/gif;base64,R0lGODlhEAAOALMIAOC6eJdaH61zLZ9oJMOHNP/Sg//inv///////wAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAgALAAAAAAQAA4AAAQ9EMlJq72XaIKnOOAhdIRhFgCwaRQRviE3lWZtB5Rg78bo8TafZFAoGo8DSuDILOAmAUHT+JwMrthsZ4uIAAA7)
+			no-repeat
+			left center;
+		}
+
+		span.file a, span.file_folder a {
+			text-decoration: none;
+			color: #333;
+		 }
+
+		span.file a:hover, span.file_folder a:hover {
+			text-decoration: underline;
+			color: #900;
+		 }
+
+		.path_info {
+			background: #fff;
+			font-family: arial;
+			font-size: 8pt;
+			border: 0px;
+			border-bottom: 1px solid #CCC;
+			padding:3px;
+			padding-left: 6px;
+		}
+		.path_divider {
+			display:inline-block;
+			margin-left: 3px;
+			margin-right: 2px;
+			margin-bottom: 1px;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 3px 0 3px 5px;
+			border-color: transparent transparent transparent #000000;
+		}
+
+		.num_files {
+			padding: 10px;
+		}
+
+		/* --- DynaTree --- */
+		ul.dynatree-container
+		{
+			white-space: nowrap;
+			padding: 0px;
+			margin: 0; /* issue 201 */
+			background-color: white;
+			border: 0px dotted gray;
+			overflow: auto;
+			height: 100%; /* issue 263 */
+		}
+
+		ul.dynatree-container ul
+		{
+			padding: 0 0 0 16px;
+			margin: 0;
+		}
+
+		ul.dynatree-container li
+		{
+			list-style-image: none;
+			list-style-position: outside;
+			list-style-type: none;
+			-moz-background-clip:border;
+			-moz-background-inline-policy: continuous;
+			-moz-background-origin: padding;
+			background-attachment: scroll;
+			background-color: transparent;
+			background-repeat: repeat-y;
+			/* vline.gif */
+			background-image:url(data:image/gif;base64,R0lGODlhEAAQAPcAAAAAAIAAAACAAICAAAAAgIAAgACAgMDAwMDcwKbK8P///6Wlpf/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////78KCgpICAgP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAP4ALAAAAAAQABAAAAgpAP0JFHhvoMGDCBMiLKiwocOBDB9KXDixosGIFidizPhwI8eGHj8KDAgAOw==);
+			background-position: 0 0;
+			margin: 0;
+			padding: 1px 0 0 0;
+		}
+		ul.dynatree-container li.dynatree-lastsib
+		{
+			background-image: none;
+		}
+		ul.dynatree-no-connector > li
+		{
+			background-image: none;
+		}
+		.ui-dynatree-disabled ul.dynatree-container
+		{
+			opacity: 0.5;
+			background-color: silver;
+		}
+		span.dynatree-empty,
+		span.dynatree-vline,
+		span.dynatree-connector,
+		span.dynatree-expander,
+		span.dynatree-icon,
+		span.dynatree-checkbox,
+		span.dynatree-radio,
+		span.dynatree-drag-helper-img,
+		#dynatree-drop-marker
+		{
+			width: 16px;
+			height: 16px;
+			display: inline-block; /* Required to make a span sizeable */
+			vertical-align: top;
+			background-repeat: no-repeat;
+			background-position: left;
+			/* icons.gif */
+			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABwCAYAAACuE3ZzAAAA+UlEQVR4nO3YYY6CMBAG0HazJ9QjrMfSI+AV9YepwQ0IWVgmOO8lxIL5jOmMQlsKAAAAAAAAAAAAAAAAAAAAwCfquvMtMk80HZCdDsiuVXDu69p5oqlMdjogOx2QnQ7ILnotEJ1PpZYyb8aOx1Mde2/P+e82OBx+RsPX62Xq83eb/xq6WOvoZM+yNL+lwQnI5GUCaq3P6vXHzdR6fq18/9gk33XnW18p5eV86k9m7fxv/5n3Exi6+Cji3y3Nb+l5G5xzq3ln73n6op/Fo/NEVyA6T3QFovOp2A9og72u55fm7QdEf4Fo9gPawH5AUvYD2iB6PR6dB3K6A7CRDkvQMF4HAAAAAElFTkSuQmCC);
+			background-position: 0 0;
+		}
+		ul.dynatree-container img
+		{
+			width: 16px;
+			height: 16px;
+			margin-left: 3px;
+			vertical-align: top;
+			border-style: none;
+		}
+		span.dynatree-connector
+		{
+			background-position: -16px -64px;
+		}
+		span.dynatree-expander
+		{
+			background-position: 0px -80px;
+			cursor: pointer;
+		}
+		.dynatree-exp-cl span.dynatree-expander /* Collapsed, not delayed, last sibling */
+		{
+			background-position: 0px -96px;
+		}
+		.dynatree-exp-cd span.dynatree-expander /* Collapsed, delayed, not last sibling */
+		{
+			background-position: -64px -80px;
+		}
+		.dynatree-exp-cdl span.dynatree-expander /* Collapsed, delayed, last sibling */
+		{
+			background-position: -64px -96px;
+		}
+		.dynatree-exp-e span.dynatree-expander,  /* Expanded, not delayed, not last sibling */
+		.dynatree-exp-ed span.dynatree-expander  /* Expanded, delayed, not last sibling */
+		{
+			background-position: -32px -80px;
+		}
+		.dynatree-exp-el span.dynatree-expander,  /* Expanded, not delayed, last sibling */
+		.dynatree-exp-edl span.dynatree-expander  /* Expanded, delayed, last sibling */
+		{
+			background-position: -32px -96px;
+		}
+		.dynatree-loading span.dynatree-expander  /* 'Loading' status overrides all others */
+		{
+			background-position: 0 0;
+			/*background-image: url("loading.gif");*/
+		}
+		span.dynatree-icon /* Default icon */
+		{
+			margin-left: 3px;
+			background-position: 0px 0px;
+		}
+		.dynatree-ico-cf span.dynatree-icon  /* Collapsed Folder */
+		{
+			/*background-position: 0px -16px;*/
+			background: url(data:image/gif;base64,R0lGODlhEAAOALMIAOC6eJdaH61zLZ9oJMOHNP/Sg//inv///////wAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAgALAAAAAAQAA4AAAQ9EMlJq72XaIKnOOAhdIRhFgCwaRQRviE3lWZtB5Rg78bo8TafZFAoGo8DSuDILOAmAUHT+JwMrthsZ4uIAAA7)
+		}
+		.dynatree-ico-ef span.dynatree-icon  /* Expanded Folder */
+		{
+			/*background-position: -64px -16px;*/
+			background:url(data:image/gif;base64,R0lGODlhEAAOALMIAJdaH+C6eJ9oJMOHNK1zLf/inv/Sg////////wAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAgALAAAAAAQAA4AAARAEMlJq7136IEnOeBBdENhGkGwadQQviE3lWZtAxRhE3zvIzpT0HYaCQwGAnLJHCEASabU+VRKl1SJYMvtdr6ICAA7);
+		}
+		span.dynatree-node
+		{
+			/*	display: -moz-inline-box; /* issue 133, 165, 172, 192. removed for issue 221*/
+			/*	-moz-box-align: start; /* issue 221 */
+			/*  display: inline-block; /* Required to make a span sizeable */
+		}
+		ul.dynatree-container a
+		{
+			color: black; /* inherit doesn't work on IE */
+			text-decoration: none;
+			vertical-align: top;
+			margin: 0px;
+			/*margin-left: 3px;*/
+			border: 1px solid transparent;
+			/*	outline: 0; /* @ Firefox, prevent dotted border after click */
+		}
+		ul.dynatree-container a:hover
+		{
+			/*	text-decoration: underline; */
+			background-color: #E9EDEF;
+			border: 1px solid #aaa;
+		}
+		span.dynatree-node a
+		{
+			/*font-size: 10pt; /* required for IE, quirks mode */
+			display: inline-block; /* Better alignment, when title contains <br> */
+			padding-left: 2px;
+			padding-right: 3px; /* Otherwise italic font will be outside bounds */
+		}
+		span.dynatree-folder a
+		{
+		}
+		ul.dynatree-container a:focus,
+		span.dynatree-focused a:link  /* @IE */
+		{
+		}
+		span.dynatree-has-children a
+		{
+		}
+		span.dynatree-expanded a
+		{
+		}
+		span.dynatree-selected a
+		{
+		}
+		span.dynatree-active a
+		{
+			font-weight: bold;
+			/*background-color: #3169C6 !important;
+			color: white !important; /* @ IE6 */
+		}

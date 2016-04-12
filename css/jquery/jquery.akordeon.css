@@ -1,0 +1,159 @@
+﻿.akordeon
+{
+    width: 475px;
+    height: 180px;
+    font-family: Arial;
+    font-size: 12px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    behavior: url(PIE.htc);
+    overflow: auto;
+}
+.akordeon-item
+{
+    position: relative;
+}
+.akordeon-item .akordeon-item-head>ul>li>a
+{
+    height: 28px;
+    background: #646464;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#646464), to(#303030));
+    background-image: -moz-linear-gradient(#646464, #303030);
+    background-image: -webkit-linear-gradient(#646464, #303030);
+    background-image: -o-linear-gradient(#646464, #303030);
+    background: -ms-linear-gradient(#646464, #303030);
+    background: linear-gradient(#646464, #303030);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#646464', endColorstr='#303030',GradientType=0 ); /* IE6-9 */ /*position:relative;*/
+    padding-top: 0;
+}
+.akordeon-item .akordeon-item-body
+{
+    background: #f9f9f9; /* Old browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#fbfbfb',GradientType=0 ); /* IE6-9 */ /* min-height: 100px;     padding: 10px;*/
+    border-bottom: none;
+    overflow: auto;
+}
+.akordeon-icon
+{
+    width: 16px;
+    height: 16px;
+    border: solid 1px #646464;
+    background: #f3fcdc; /* Old browsers */
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; /* position: absolute;     left: -8px;       top:14px;*/
+    padding: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+    float: left;
+    cursor: pointer;
+    behavior: url(PIE.htc);
+}
+.akordeon-heading
+{
+    float: left;
+    padding-left: 10px;
+    padding-top: 6px;
+    color: #c0c0c0;
+}
+.akordeon-icon span
+{
+    color: #646464;
+    font-size: 16px;
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:5px;
+    margin-left:10px;
+}
+.akordeon-item.expanded .akordeon-icon span
+{
+    top: -3px;
+}
+.akordeon-item-head-container
+{
+    width: 100%;
+    position: absolute;
+    left: -8px;
+    cursor: pointer;
+}
+
+.akordeon-item.expanded .akordeon-item-body
+{
+    border-top: solid 1px #5c5c5c;
+}
+.akordeon-item.collapsed
+{
+}
+
+.akordeon-item.expanded .akordeon-heading
+{
+    font-weight: bold;
+    color: #e9f9b9;
+}
+
+.akordeon-item-content
+{
+    padding: 10px;
+    min-height: 90px;
+    height: 100px;
+    overflow:auto;
+}
+.akordeon-border-bottom
+{
+    border-bottom: solid 1px #808080;
+}
+.akordeon-border-top
+{
+    border-top: solid 1px #808080;
+}
+.akordeon-item.expanded .akordeon-item-body.akordeon-border-bottom
+{
+    border-bottom: solid 1px #808080 !important;
+}
+.akordeon-item.akordeon-item-first .akordeon-item-head
+{
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    behavior: url(PIE.htc);
+}
+
+.akordeon-item.akordeon-item-last.collapsed .akordeon-item-head
+{
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom: none;
+    behavior: url(PIE.htc);
+}
+.akordeon-item.akordeon-item-last.expanded .akordeon-item-head
+{
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: solid 1px black;
+    behavior: url(PIE.htc);
+}
+.akordeon-item.akordeon-item-last.expanded .akordeon-item-body
+{
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    behavior: url(PIE.htc);
+}

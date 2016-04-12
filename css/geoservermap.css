@@ -1,0 +1,127 @@
+@CHARSET "UTF-8";
+
+            /* General settings */
+            body {
+                font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+                font-size: small;
+            }
+            /* Toolbar styles */
+            #toolbar {
+                position: relative;
+                padding-bottom: 0.5em;
+                display: none;
+            }
+            
+            #toolbar ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            #toolbar ul li {
+                float: left;
+                padding-right: 1em;
+                padding-bottom: 0.5em;
+            }
+            
+            #toolbar ul li a {
+                font-weight: bold;
+                font-size: smaller;
+                vertical-align: middle;
+                color: black;
+                text-decoration: none;
+            }
+
+            #toolbar ul li a:hover {
+                text-decoration: underline;
+            }
+            
+            #toolbar ul li * {
+                vertical-align: middle;
+            }
+
+            /* The map and the location bar */
+            #map {
+                clear: both;
+                position: relative;
+                width: 100%;
+                height: 470px;
+                border: 2px solid #585858;
+            }
+            
+            #map_f {
+                clear: both;
+                position: relative;
+                width: 100%;
+                height: 340px;
+                border: 2px solid #585858;
+            }
+            #map_evalue {
+                clear: both;
+                position: relative;
+                width: 100%;
+                height: 200px;
+                border: 2px solid #585858;
+            }
+            #map_sdisplay {
+                clear: both;
+                position: relative;
+                width: 100%;
+                height: 399px;
+                border: 2px solid #585858;
+            }
+            
+            #map_vdisplay {
+                clear: both;
+                position: relative;
+                width: 100%;
+                height: 520px;
+                border: 2px solid #585858;
+            }
+            
+            #wrapper {
+                width: 512px;
+            }
+            
+            #location {
+                float: right;
+            }
+            
+            #options {
+                position: absolute;
+                left: 13px;
+                top: 7px;
+                z-index: 3000;
+            }
+
+            /* Styles used by the default GetFeatureInfo output, added to make IE happy */
+            table.featureInfo, table.featureInfo td, table.featureInfo th {
+                border: 1px solid #ddd;
+                border-collapse: collapse;
+                margin: 0;
+                padding: 0;
+                font-size: 90%;
+                padding: .2em .1em;
+            }
+            
+            table.featureInfo th {
+                padding: .2em .2em;
+                font-weight: bold;
+                background: #eee;
+            }
+            
+            table.featureInfo td {
+                background: #fff;
+            }
+            
+            table.featureInfo tr.odd td {
+                background: #eee;
+            }
+            
+            table.featureInfo caption {
+                text-align: left;
+                font-size: 100%;
+                font-weight: bold;
+                padding: .2em .2em;
+            }
+      
